@@ -1,0 +1,51 @@
+models:
+  Kategori:
+    kategori: string
+    slug: string
+    relationships:
+      hasMany: Informasi, Galery
+  Slider:
+    image: string
+    imageBackground: string
+    title: string
+    tagline: string
+    position: string
+    direction_text: string
+  Informasi:
+    user_id: foreign
+    kategori_id: foreign
+    judul: string
+    slug: string
+    text: longtext
+    thumbnail: string
+    dilihat: integer
+
+  Galery:
+    user_id: foreign
+    kategori_id: foreign
+    judul: string
+    slug: string
+    text: longtext
+    thumbnail: string
+    dilihat: integer
+
+  Sarana:
+    nama_sarana: string
+    foto_sarana: string
+    status_sewa: string
+    harga_sewa: string
+
+  Profil:
+    nama_wisata: string
+    alamat: text
+    logo: string
+    no_telp: string
+    email_wisata: string
+    langtitude: string
+    longtitude: string
+
+  Ulasan:
+    nama: string
+    email: string
+    ulasan: longtext
+    status_ulasan: string
